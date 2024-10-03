@@ -1,0 +1,7 @@
+{
+  "name": "go-cli-sample",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": ".."
+  }
+}
