@@ -27,7 +27,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
+var word string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -43,7 +43,7 @@ to quickly create a Cobra application.`,
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Hello World!")
+		fmt.Println(word, "World!")
 	},
 }
 
@@ -66,6 +66,7 @@ func init() {
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	rootCmd.Flags().StringVarP(&word, "word", "w", "Hello", "Message to display before 'World!'")
 }
 
 
