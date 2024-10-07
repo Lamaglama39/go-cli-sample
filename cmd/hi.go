@@ -30,6 +30,7 @@ import (
 // hiCmd represents the hi command
 var hiCmd = &cobra.Command{
 	Use:   "hi",
+	Version: rootCmd.Version,
 	Short: "Alpaca greeting!",
 	Long:  `Display alpaca greeting.`,
 	Run: func(cmd *cobra.Command, args []string) {
